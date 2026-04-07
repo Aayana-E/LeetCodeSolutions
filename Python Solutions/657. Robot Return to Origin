@@ -1,0 +1,21 @@
+class Solution:
+    def judgeCircle(self, moves: str) -> bool:
+        
+
+
+        LRCount = 0
+        UDCount = 0
+        for char in moves:
+            if char == "R":
+                LRCount += 1
+            if char == "L":
+                LRCount -= 1
+            if char == "U":
+                UDCount += 1
+            if char == "D":
+                UDCount -= 1
+        if LRCount == 0 and UDCount == 0:
+            return True
+        else:
+            return False
+       
